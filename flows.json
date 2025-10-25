@@ -177,32 +177,6 @@
         "wires": []
     },
     {
-        "id": "55e6cf989ce3b3e9",
-        "type": "mysql",
-        "z": "d4dabbf1f202f6b3",
-        "mydb": "957fb3fca286266d",
-        "name": "",
-        "x": 750,
-        "y": 720,
-        "wires": [
-            [
-                "9dbe5c7a33b3ee06",
-                "fc32050dfd63579b",
-                "590b677e8b42d0be",
-                "978e098c07e11fdc",
-                "0865fe06f319d50a",
-                "0f6e910bcf8e3e81",
-                "b4044384eccfbc9f",
-                "2ba7774f12513e42",
-                "4faa8d8655f1aac1",
-                "4eb745ef0ec4529e",
-                "c5efd0282f55b44c",
-                "0d8b310a2d932a86",
-                "ddf2e8cdcd16854a"
-            ]
-        ]
-    },
-    {
         "id": "9dbe5c7a33b3ee06",
         "type": "function",
         "z": "d4dabbf1f202f6b3",
@@ -725,9 +699,7 @@
         "x": 560,
         "y": 720,
         "wires": [
-            [
-                "55e6cf989ce3b3e9"
-            ]
+            []
         ]
     },
     {
@@ -771,21 +743,6 @@
         "wires": []
     },
     {
-        "id": "707c46a3d667ea75",
-        "type": "mysql",
-        "z": "2d0d9db02dea2db4",
-        "mydb": "957fb3fca286266d",
-        "name": "",
-        "x": 670,
-        "y": 380,
-        "wires": [
-            [
-                "e2ccd0af8f165aa1",
-                "32275bebf80ee502"
-            ]
-        ]
-    },
-    {
         "id": "2b219c087d31b0cc",
         "type": "function",
         "z": "2d0d9db02dea2db4",
@@ -800,9 +757,7 @@
         "x": 440,
         "y": 380,
         "wires": [
-            [
-                "707c46a3d667ea75"
-            ]
+            []
         ]
     },
     {
@@ -1021,23 +976,7 @@
         "x": 510,
         "y": 440,
         "wires": [
-            [
-                "4787a6d36a55c0ca"
-            ]
-        ]
-    },
-    {
-        "id": "4787a6d36a55c0ca",
-        "type": "mysql",
-        "z": "1ef578cd676e31e4",
-        "mydb": "957fb3fca286266d",
-        "name": "",
-        "x": 750,
-        "y": 440,
-        "wires": [
-            [
-                "90c5e8acdc57855b"
-            ]
+            []
         ]
     },
     {
@@ -1091,23 +1030,7 @@
         "x": 510,
         "y": 560,
         "wires": [
-            [
-                "9b9d5dc46bfe7053"
-            ]
-        ]
-    },
-    {
-        "id": "9b9d5dc46bfe7053",
-        "type": "mysql",
-        "z": "1ef578cd676e31e4",
-        "mydb": "957fb3fca286266d",
-        "name": "",
-        "x": 750,
-        "y": 560,
-        "wires": [
-            [
-                "c01dd3edcb84e5a0"
-            ]
+            []
         ]
     },
     {
@@ -1378,24 +1301,7 @@
         "x": 190,
         "y": 240,
         "wires": [
-            [
-                "dfe6d509f768ae41"
-            ]
-        ]
-    },
-    {
-        "id": "dfe6d509f768ae41",
-        "type": "mysql",
-        "z": "df1c83ab4ff30603",
-        "mydb": "957fb3fca286266d",
-        "name": "",
-        "x": 210,
-        "y": 360,
-        "wires": [
-            [
-                "fadb735093f90b5c",
-                "e8df5157d08774d0"
-            ]
+            []
         ]
     },
     {
