@@ -1,1 +1,1450 @@
-[]
+[
+    {
+        "id": "fe379c0d82211044",
+        "type": "tab",
+        "label": "Fluxo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d4dabbf1f202f6b3",
+        "type": "tab",
+        "label": "Atributos",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2d0d9db02dea2db4",
+        "type": "tab",
+        "label": "Widgets_Notas",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1ef578cd676e31e4",
+        "type": "tab",
+        "label": "Status",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "df1c83ab4ff30603",
+        "type": "tab",
+        "label": "Tabela e notas bimestrais",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "957fb3fca286266d",
+        "type": "MySQLdatabase",
+        "name": "dungeonsandcode",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "dungeonsandcode",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "747ad472f2389a01",
+        "type": "ui-base",
+        "name": "Dungeon&Code",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "headerContent": "dashboard",
+        "navigationStyle": "default",
+        "titleBarStyle": "default",
+        "showReconnectNotification": true,
+        "notificationDisplayTime": 1,
+        "showDisconnectNotification": true,
+        "allowInstall": false
+    },
+    {
+        "id": "b38d90bb81bf0958",
+        "type": "ui-theme",
+        "name": "ui-base.label.theme 2",
+        "colors": {
+            "surface": "#191c30",
+            "primary": "#f3c94a",
+            "bgPage": "#383b53",
+            "groupBg": "#191c30",
+            "groupOutline": "#191c30"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "5587ec361d1b1451",
+        "type": "ui-page",
+        "name": "Página Inicial (Estudante)",
+        "ui": "747ad472f2389a01",
+        "path": "/page2",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "b38d90bb81bf0958",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": "0",
+                "cols": "3"
+            },
+            {
+                "name": "Tablet",
+                "px": "576",
+                "cols": "6"
+            },
+            {
+                "name": "Small Desktop",
+                "px": "768",
+                "cols": "9"
+            },
+            {
+                "name": "Desktop",
+                "px": "1024",
+                "cols": "12"
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "57c8efa6f68f6256",
+        "type": "ui-group",
+        "name": "Widgets_notas",
+        "page": "5587ec361d1b1451",
+        "width": 9,
+        "height": "2",
+        "order": 2,
+        "showTitle": false,
+        "className": "",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "0cf5c57e4cd91776",
+        "type": "ui-group",
+        "name": "Text",
+        "page": "5587ec361d1b1451",
+        "width": 3,
+        "height": 1,
+        "order": 1,
+        "showTitle": false,
+        "className": "widget",
+        "visible": "true",
+        "disabled": "false",
+        "groupType": "default"
+    },
+    {
+        "id": "3951b4f3f54b8d1a",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 3,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Oratória",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": "18",
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1240,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "55e6cf989ce3b3e9",
+        "type": "mysql",
+        "z": "d4dabbf1f202f6b3",
+        "mydb": "957fb3fca286266d",
+        "name": "",
+        "x": 750,
+        "y": 720,
+        "wires": [
+            [
+                "9dbe5c7a33b3ee06",
+                "fc32050dfd63579b",
+                "590b677e8b42d0be",
+                "978e098c07e11fdc",
+                "0865fe06f319d50a",
+                "0f6e910bcf8e3e81",
+                "b4044384eccfbc9f",
+                "2ba7774f12513e42",
+                "4faa8d8655f1aac1",
+                "4eb745ef0ec4529e",
+                "c5efd0282f55b44c",
+                "0d8b310a2d932a86",
+                "ddf2e8cdcd16854a"
+            ]
+        ]
+    },
+    {
+        "id": "9dbe5c7a33b3ee06",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 2",
+        "func": "let resultado = msg.payload[0];\n\nif (msg.payload[0] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 320,
+        "wires": [
+            [
+                "3951b4f3f54b8d1a"
+            ]
+        ]
+    },
+    {
+        "id": "82a2251136bd11a8",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 4,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Intelecto",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1240,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "fc32050dfd63579b",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 3",
+        "func": "let resultado = msg.payload[1];\n\nif (msg.payload[1] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 400,
+        "wires": [
+            [
+                "82a2251136bd11a8"
+            ]
+        ]
+    },
+    {
+        "id": "29f6f4f2603dfd2b",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 5,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Energia Arcana",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1260,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "590b677e8b42d0be",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 4",
+        "func": "let resultado = msg.payload[2];\n\nif (msg.payload[2] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 480,
+        "wires": [
+            [
+                "29f6f4f2603dfd2b"
+            ]
+        ]
+    },
+    {
+        "id": "2110ed7538e570f8",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 6,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Alquimia",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1240,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "978e098c07e11fdc",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 5",
+        "func": "let resultado = msg.payload[3];\n\nif (msg.payload[3] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span><p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span><p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 560,
+        "wires": [
+            [
+                "2110ed7538e570f8"
+            ]
+        ]
+    },
+    {
+        "id": "5bd3bfe55149ee1f",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 7,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Vitalidade",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1240,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "0865fe06f319d50a",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 6",
+        "func": "let resultado = msg.payload[4];\n\nif (msg.payload[4] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 640,
+        "wires": [
+            [
+                "5bd3bfe55149ee1f"
+            ]
+        ]
+    },
+    {
+        "id": "e7a364cd077f8c3e",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 8,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Memória Temporal",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1270,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "0f6e910bcf8e3e81",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 7",
+        "func": "let resultado = msg.payload[5];\n\nif (msg.payload[5] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 720,
+        "wires": [
+            [
+                "e7a364cd077f8c3e"
+            ]
+        ]
+    },
+    {
+        "id": "e161b9f6fdf1dce3",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 9,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Percepção",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1250,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "b4044384eccfbc9f",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 8",
+        "func": "let resultado = msg.payload[6];\n\nif (msg.payload[6] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 800,
+        "wires": [
+            [
+                "e161b9f6fdf1dce3"
+            ]
+        ]
+    },
+    {
+        "id": "0fe8926aa2fe1478",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 10,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Sabedoria Interior",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1270,
+        "y": 880,
+        "wires": []
+    },
+    {
+        "id": "2ba7774f12513e42",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 9",
+        "func": "let resultado = msg.payload[7];\n\nif (msg.payload[7] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1000,
+        "y": 880,
+        "wires": [
+            [
+                "0fe8926aa2fe1478"
+            ]
+        ]
+    },
+    {
+        "id": "4a116637f027d3f1",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 11,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Influência Social",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1260,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "4faa8d8655f1aac1",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 10",
+        "func": "let resultado = msg.payload[8];\n\nif (msg.payload[8] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 960,
+        "wires": [
+            [
+                "4a116637f027d3f1"
+            ]
+        ]
+    },
+    {
+        "id": "0206a8b8efb9c740",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 12,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Criatividade",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1250,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "4eb745ef0ec4529e",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 11",
+        "func": "let resultado = msg.payload[9];\n\nif (msg.payload[9] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 1040,
+        "wires": [
+            [
+                "0206a8b8efb9c740"
+            ]
+        ]
+    },
+    {
+        "id": "7fa15ea1c2bdaae8",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 13,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Força",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1230,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "c5efd0282f55b44c",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 12",
+        "func": "let resultado = msg.payload[10];\n\nif (msg.payload[10] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 1120,
+        "wires": [
+            [
+                "7fa15ea1c2bdaae8"
+            ]
+        ]
+    },
+    {
+        "id": "0f4ad31986c08362",
+        "type": "ui-text",
+        "z": "d4dabbf1f202f6b3",
+        "group": "0cf5c57e4cd91776",
+        "order": 14,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "Poliglotismo Arcano",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 1270,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "0d8b310a2d932a86",
+        "type": "function",
+        "z": "d4dabbf1f202f6b3",
+        "name": "function 13",
+        "func": "let resultado = msg.payload[11];\n\nif (msg.payload[11] && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">100</span></p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 1200,
+        "wires": [
+            [
+                "0f4ad31986c08362"
+            ]
+        ]
+    },
+    {
+        "id": "d4d573bb7155eda9",
+        "type": "inject",
+        "z": "d4dabbf1f202f6b3",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "SELECT SUM(n.nota) AS Nota, m.nome_materia AS Materia FROM nota n JOIN materia_professor mp ON n.id_mat_prof = mp.id_mat_prof JOIN materia m ON mp.id_materia = m.id_materia JOIN aluno_turma atu ON n.id_aluno_turma = atu.id_aluno_turma WHERE atu.id_aluno_turma = 1 GROUP BY Materia;",
+        "x": 560,
+        "y": 720,
+        "wires": [
+            [
+                "55e6cf989ce3b3e9"
+            ]
+        ]
+    },
+    {
+        "id": "feef82b407ab15d0",
+        "type": "ui-template",
+        "z": "d4dabbf1f202f6b3",
+        "group": "",
+        "page": "5587ec361d1b1451",
+        "ui": "",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "head": "",
+        "format": "<style>\n    /* define any styles here - supports raw CSS */\n    @import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');\n\n    div, label, .text {\n        font-family: \"Jersey 10\", sans-serif;\n        font-weight: 400;\n        font-style: normal;\n        font-size: 25px;\n    }\n\n    .nrdb-ui-gauge-title {\n        font-size: 30px;\n        font-weight: normal;\n    }\n\n    .text {\n        top: -70px;\n    }\n    label {\n        color: #F3C94A;\n    }\n\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "widget:page",
+        "className": "",
+        "x": 560,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ddf2e8cdcd16854a",
+        "type": "debug",
+        "z": "d4dabbf1f202f6b3",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "707c46a3d667ea75",
+        "type": "mysql",
+        "z": "2d0d9db02dea2db4",
+        "mydb": "957fb3fca286266d",
+        "name": "",
+        "x": 670,
+        "y": 380,
+        "wires": [
+            [
+                "e2ccd0af8f165aa1",
+                "32275bebf80ee502"
+            ]
+        ]
+    },
+    {
+        "id": "2b219c087d31b0cc",
+        "type": "function",
+        "z": "2d0d9db02dea2db4",
+        "name": "function 25",
+        "func": "msg.topic = \"SELECT SUM(n.nota) AS Nota, m.nome_materia AS Materia FROM nota n JOIN materia_professor mp ON n.id_mat_prof = mp.id_mat_prof JOIN materia m ON mp.id_materia = m.id_materia JOIN aluno_turma atu ON n.id_aluno_turma = atu.id_aluno_turma WHERE atu.id_aluno_turma = 1 GROUP BY Materia;\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "707c46a3d667ea75"
+            ]
+        ]
+    },
+    {
+        "id": "e2ccd0af8f165aa1",
+        "type": "function",
+        "z": "2d0d9db02dea2db4",
+        "name": "function 26",
+        "func": "let resultado = msg.payload[0];\nmsg.payload = resultado.Nota;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 280,
+        "wires": [
+            [
+                "40be24662d13b47e"
+            ]
+        ]
+    },
+    {
+        "id": "40be24662d13b47e",
+        "type": "ui-gauge",
+        "z": "2d0d9db02dea2db4",
+        "name": "Nota Anual",
+        "group": "57c8efa6f68f6256",
+        "order": 2,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Nota Anual",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#f3c94a",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "widg_n",
+        "x": 670,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "35f6fb9663b2da0f",
+        "type": "inject",
+        "z": "2d0d9db02dea2db4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "2b219c087d31b0cc"
+            ]
+        ]
+    },
+    {
+        "id": "69b8de0e22821068",
+        "type": "ui-template",
+        "z": "2d0d9db02dea2db4",
+        "group": "57c8efa6f68f6256",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 1,
+        "width": 0,
+        "height": 2,
+        "head": "",
+        "format": "<template>\n    <span id=\"titulo\" class=\"titulo-2\">Nome da Materia</span>\n    <span id=\"materia\" class=\"materia\">Descrição do atributo.</span>\n</template>\n\n<style>\n    /* define any styles here - supports raw CSS */\n    .nrdb-ui-gauge-value nrdb-ui-gauge-half {\n        font-size: 20px;\n    }\n    .titulo-2 {\n        font-size: 35px;\n        color: #F3C94A;\n        height: auto;\n        position: absolute;\n        width: auto;\n        left: 30px;\n    }\n\n    .materia {\n    position: absolute;\n    left: 30px;\n    top: 40px;\n    color: white;\n    }\n\n    .nrdb-ui-widget nrdb-ui-table, .v-table__wrapper {\n        height: 400px;\n    }\n\n    .nrdb-ui-table-title {\n        font-size: 30px;\n        font-weight: normal;\n        padding-top: 20px;\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 660,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "32275bebf80ee502",
+        "type": "function",
+        "z": "2d0d9db02dea2db4",
+        "name": "function 27",
+        "func": "let resultado = msg.payload[0];\nmsg.payload = resultado.Nota;\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "b2dad582ebd24db2"
+            ]
+        ]
+    },
+    {
+        "id": "b2dad582ebd24db2",
+        "type": "ui-gauge",
+        "z": "2d0d9db02dea2db4",
+        "name": "Nota Bimestral",
+        "group": "57c8efa6f68f6256",
+        "order": 3,
+        "value": "payload",
+        "valueType": "msg",
+        "width": 3,
+        "height": 4,
+        "gtype": "gauge-half",
+        "gstyle": "rounded",
+        "title": "Nota Bimestral",
+        "alwaysShowTitle": false,
+        "floatingTitlePosition": "top-left",
+        "units": "%",
+        "icon": "",
+        "prefix": "",
+        "suffix": "",
+        "segments": [
+            {
+                "from": "0",
+                "color": "#f3c94a",
+                "text": "",
+                "textType": "label"
+            }
+        ],
+        "min": 0,
+        "max": "100",
+        "sizeThickness": 16,
+        "sizeGap": 4,
+        "sizeKeyThickness": 8,
+        "styleRounded": true,
+        "styleGlow": false,
+        "className": "widg_n",
+        "x": 420,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7121d3ddaee1342b",
+        "type": "ui-template",
+        "z": "1ef578cd676e31e4",
+        "group": "0cf5c57e4cd91776",
+        "page": "",
+        "ui": "",
+        "name": "",
+        "order": 1,
+        "width": 4,
+        "height": 3,
+        "head": "",
+        "format": "<template>\n    <span id=\"titulo\" class=\"titulo\">{{msg.payload.nome}}</span>\n    <div class=\"moldura\"></div>\n    <span id=\"classe\" class=\"classe\">\n            <span class=\"classe_yellow\">Classe: </span><span id=\"classe\" class=\"classe_white\">Nome da Classe</span>\n    </span>\n    <span id=\"nvl\" class=\"nvl\">Nvl. 1</span>\n    <span id=\"nvl\" class=\"exp_text\">Exp:</span>\n    <span id=\"exp\" class=\"exp\">\n            <span id=\"exp_white-1\" class=\"classe_white\">{{msg.payload.expAtual}}</span>\n    <span id=\"exp_yellow-1\" class=\"classe_yellow\"> / </span>\n    <span id=\"exp_white-2\" class=\"classe_white\">1800</span>\n    </span>\n</template>\n\n<script>\n    (function(scope) {\n        scope.$watch('msg', function(msg) {\n            if (!msg || !msg.payload) return;\n            const { nome, expAtual} = msg.payload;\n            document.getElementById('titulo').innerText = nome || 'Estudante';\n            document.getElementById('exp_white-1').innerText = expAtual || 0;\n        });\n})(scope);\n</script>\n\n<style>\n    body {\n        background-color: #383B53;\n    }\n\n    .titulo {\n        font-size: 30px;\n        color: rgba(242.985595703125, 200.6383514404297, 73.59659576416016, 1);\n        width: 140px;\n        left: 170px;\n        height: auto;\n        position: absolute;\n    }\n\n    .moldura {\n        position: absolute;\n        top: 30px;\n        height: 160px;\n        width: 160px;\n        background-size: cover;\n        background-position: center;\n        background-repeat: no-repeat;\n        background-image: url(/pixil-frame-0.png);\n        inset: 1px 1px 1px 1px;\n        border-radius: 0px 0px 0px 0px;\n        border-width: 6px 6px 6px 6px;\n        border-style: solid;\n        border-color: rgba(242.985595703125, 200.6383514404297, 73.59659576416016, 1);\n        pointer-events: none;\n        box-sizing: border-box;\n    }\n\n    .exp_text,\n    nvl {\n        line-height: 100%;\n        color: #F3C94A;\n    }\n\n    .exp_text {\n        position: absolute;\n        left: 170px;\n        top: 106px;\n    }\n\n    .exp {\n        text-align: right;\n        color: rgba(255, 255, 255, 1);\n        width: 150px;\n        position: absolute;\n        left: 178px;\n        top: 102px;\n    }\n\n    .nrdb-ui-progress-wrapper, .v-progress-linear v-progress-linear--active v-theme--nrdb v-locale--is-ltr {\n        top: -60px;\n        left: 170px;\n        width: 158px;\n        height: 20px;\n        position: relative\n    }\n\n    .nvl {\n        width: auto;\n        height: auto;\n        position: absolute;\n        left: 170px;\n        top: 36px;\n        white-space: pre;\n        flex-grow: 0;\n        color: #F3C94A;\n    }\n\n    .classe {\n        width: 150px;\n        height: 27px;\n        line-height: 20px;\n        position: absolute;\n        left: 170px;\n        top: 65px;\n    }\n\n    .classe_yellow {\n        color: rgba(242.985595703125, 200.6383514404297, 73.59659576416016, 1);\n        position: relative;\n    }\n\n    .classe_white {\n        color: rgba(255, 255, 255, 1);\n        position: relative;\n    }\n</style>",
+        "storeOutMessages": true,
+        "passthru": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 960,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f0142189b6aadeeb",
+        "type": "function",
+        "z": "1ef578cd676e31e4",
+        "name": "function 14",
+        "func": "msg.topic = \"SELECT SUM(n.nota) * 10 AS Nota, SUBSTRING(a.nome_aluno, 1, INSTR(a.nome_aluno, ' ') - 1) AS Nome FROM nota n JOIN materia_professor mp ON n.id_mat_prof = mp.id_mat_prof JOIN aluno_turma atu ON n.id_aluno_turma = atu.id_aluno_turma JOIN aluno a ON atu.id_aluno = a.id_aluno WHERE atu.id_aluno_turma = 1 GROUP BY Nome;\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 440,
+        "wires": [
+            [
+                "4787a6d36a55c0ca"
+            ]
+        ]
+    },
+    {
+        "id": "4787a6d36a55c0ca",
+        "type": "mysql",
+        "z": "1ef578cd676e31e4",
+        "mydb": "957fb3fca286266d",
+        "name": "",
+        "x": 750,
+        "y": 440,
+        "wires": [
+            [
+                "90c5e8acdc57855b"
+            ]
+        ]
+    },
+    {
+        "id": "90c5e8acdc57855b",
+        "type": "function",
+        "z": "1ef578cd676e31e4",
+        "name": "function 15",
+        "func": "if (msg.payload.length > 0) {\n    let aluno = msg.payload[0];\n    msg.payload = {\n        nome: aluno.Nome,\n        expAtual: aluno.Nota\n    };\n} else {\n    msg.payload = {\n        nome: \"Nome\",\n        expAtual: 0,\n    };\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 440,
+        "wires": [
+            [
+                "7121d3ddaee1342b"
+            ]
+        ]
+    },
+    {
+        "id": "1fc324c5ca2b9f01",
+        "type": "ui-progress",
+        "z": "1ef578cd676e31e4",
+        "group": "0cf5c57e4cd91776",
+        "name": "",
+        "label": "",
+        "order": 2,
+        "width": null,
+        "height": null,
+        "color": "",
+        "className": "exp_stats",
+        "x": 980,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "ae0d17247df3bcef",
+        "type": "function",
+        "z": "1ef578cd676e31e4",
+        "name": "function 16",
+        "func": "msg.topic = \"SELECT (SUM(n.nota) * 10) / 18 AS Nota FROM nota n JOIN aluno_turma atu ON n.id_aluno_turma = atu.id_aluno_turma JOIN aluno a ON atu.id_aluno = a.id_aluno WHERE atu.id_aluno_turma = 1 GROUP BY a.nome_aluno;\"\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 560,
+        "wires": [
+            [
+                "9b9d5dc46bfe7053"
+            ]
+        ]
+    },
+    {
+        "id": "9b9d5dc46bfe7053",
+        "type": "mysql",
+        "z": "1ef578cd676e31e4",
+        "mydb": "957fb3fca286266d",
+        "name": "",
+        "x": 750,
+        "y": 560,
+        "wires": [
+            [
+                "c01dd3edcb84e5a0"
+            ]
+        ]
+    },
+    {
+        "id": "c01dd3edcb84e5a0",
+        "type": "function",
+        "z": "1ef578cd676e31e4",
+        "name": "function 17",
+        "func": "let resultado = msg.payload[0];\n\nif (msg.payload && Array.isArray(msg.payload)) {\n    msg.payload = resultado.Nota;\n} else {\n    msg.payload = 0;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 680,
+        "wires": [
+            [
+                "1fc324c5ca2b9f01"
+            ]
+        ]
+    },
+    {
+        "id": "1ba54a9c55b65bb8",
+        "type": "inject",
+        "z": "1ef578cd676e31e4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "f0142189b6aadeeb",
+                "ae0d17247df3bcef"
+            ]
+        ]
+    },
+    {
+        "id": "fadb735093f90b5c",
+        "type": "ui-table",
+        "z": "df1c83ab4ff30603",
+        "group": "57c8efa6f68f6256",
+        "name": "Ranking",
+        "label": "Ranking de Aventureiros",
+        "order": 8,
+        "width": null,
+        "height": null,
+        "maxrows": "5",
+        "passthru": false,
+        "autocols": true,
+        "showSearch": false,
+        "deselect": true,
+        "selectionType": "click",
+        "columns": [],
+        "mobileBreakpoint": "lg",
+        "mobileBreakpointType": "defaults",
+        "action": "replace",
+        "className": "",
+        "x": 200,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "45ec18288b7cb632",
+        "type": "ui-text",
+        "z": "df1c83ab4ff30603",
+        "group": "57c8efa6f68f6256",
+        "order": 4,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "1° Bimestre",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": "18",
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text-bim",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "314f1c79ba02c1df",
+        "type": "ui-text",
+        "z": "df1c83ab4ff30603",
+        "group": "57c8efa6f68f6256",
+        "order": 5,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "2° Bimestre",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text-bim",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "d22e1c10a3a802f9",
+        "type": "ui-text",
+        "z": "df1c83ab4ff30603",
+        "group": "57c8efa6f68f6256",
+        "order": 6,
+        "width": 3,
+        "height": 0,
+        "name": "",
+        "label": "3° Bimestre",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text-bim",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "63af329a228332fa",
+        "type": "ui-text",
+        "z": "df1c83ab4ff30603",
+        "group": "57c8efa6f68f6256",
+        "order": 7,
+        "width": 3,
+        "height": 1,
+        "name": "",
+        "label": "4° Bimestre",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "style": true,
+        "font": "",
+        "fontSize": 16,
+        "color": "#f3c94a",
+        "wrapText": false,
+        "className": "text-bim",
+        "value": "payload",
+        "valueType": "msg",
+        "x": 750,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "365f63857ad75790",
+        "type": "function",
+        "z": "df1c83ab4ff30603",
+        "name": "function 18",
+        "func": "let resultado = msg.payload[0];\n\nif (msg.payload && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">25</span><p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">25</span><p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 60,
+        "wires": [
+            [
+                "45ec18288b7cb632"
+            ]
+        ]
+    },
+    {
+        "id": "ae7aec30158320b7",
+        "type": "function",
+        "z": "df1c83ab4ff30603",
+        "name": "function 19",
+        "func": "let resultado = msg.payload[1];\n\nif (msg.payload && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">25</span><p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">25</span><p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 140,
+        "wires": [
+            [
+                "314f1c79ba02c1df"
+            ]
+        ]
+    },
+    {
+        "id": "37774b0f3ed37b1f",
+        "type": "function",
+        "z": "df1c83ab4ff30603",
+        "name": "function 20",
+        "func": "let resultado = msg.payload[2];\n\nif (msg.payload && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">25</span><p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">25</span><p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 220,
+        "wires": [
+            [
+                "d22e1c10a3a802f9"
+            ]
+        ]
+    },
+    {
+        "id": "75fe8bce779107bf",
+        "type": "function",
+        "z": "df1c83ab4ff30603",
+        "name": "function 21",
+        "func": "let resultado = msg.payload[3];\n\nif (msg.payload && Array.isArray(msg.payload)) {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\">${resultado.Nota}</span> / <span style=\"color: #FFFFFF;\">25</span><p>`;\n} else {\n    msg.payload = `<p class=\"text\"><span style=\"color: white;\"> -- </span> / <span style=\"color: #FFFFFF;\">25</span><p>`;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 300,
+        "wires": [
+            [
+                "63af329a228332fa"
+            ]
+        ]
+    },
+    {
+        "id": "e94429ee5491fe5d",
+        "type": "function",
+        "z": "df1c83ab4ff30603",
+        "name": "function 22",
+        "func": "msg.topic = 'SELECT RANK() OVER(ORDER BY Nota DESC) AS Ranking, Aluno, Nota FROM( SELECT a.nome_aluno AS Aluno, SUM(n.nota) AS Nota FROM nota n JOIN aluno_turma atu ON n.id_aluno_turma = atu.id_aluno_turma JOIN aluno a ON atu.id_aluno = a.id_aluno JOIN materia_professor mp ON n.id_mat_prof = mp.id_mat_prof JOIN materia m ON mp.id_materia = m.id_materia WHERE m.id_materia = 1 GROUP BY a.nome_aluno) AS resultados ORDER BY Nota DESC;';\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "dfe6d509f768ae41"
+            ]
+        ]
+    },
+    {
+        "id": "dfe6d509f768ae41",
+        "type": "mysql",
+        "z": "df1c83ab4ff30603",
+        "mydb": "957fb3fca286266d",
+        "name": "",
+        "x": 210,
+        "y": 360,
+        "wires": [
+            [
+                "fadb735093f90b5c",
+                "e8df5157d08774d0"
+            ]
+        ]
+    },
+    {
+        "id": "56e5d81dabd8a87f",
+        "type": "inject",
+        "z": "df1c83ab4ff30603",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3600",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 210,
+        "y": 100,
+        "wires": [
+            [
+                "365f63857ad75790",
+                "ae7aec30158320b7",
+                "37774b0f3ed37b1f",
+                "75fe8bce779107bf",
+                "e94429ee5491fe5d"
+            ]
+        ]
+    },
+    {
+        "id": "e8df5157d08774d0",
+        "type": "debug",
+        "z": "df1c83ab4ff30603",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 480,
+        "y": 360,
+        "wires": []
+    }
+]
